@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee Table</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header d-flex justify-content-between align-items-center">
+        <h1 class="text-center">Employee Table</h1>
+        <button type="button" class="btn btn-success" id="add-employee-button">
+          <i class="fa-solid fa-plus"></i> Add new
+        </button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered" id="employee-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Phone</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="add-employee-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="add-employee-modal-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="add-employee-modal-label">
+              Add Employee
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="add-employee-form">
+              <div class="form-group">
+                <label for="emp-name">Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="emp-name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="emp-department">Department:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="emp-department"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="emp-phone">Phone:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="emp-phone"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="add-employee-submit"
+            >
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
